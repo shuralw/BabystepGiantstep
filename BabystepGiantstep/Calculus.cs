@@ -7,8 +7,18 @@ namespace BabystepGiantstep
 {
     public class Calculus
     {
-        BigInteger p = 131, g = 2, A = 125;
-        int m = 12;
+        BigInteger p, g, A;
+        int m;
+
+        public Calculus() { }
+
+        public Calculus(BigInteger _p, BigInteger _g, BigInteger _A, int _m)
+        {
+            p = _p;
+            g = _g;
+            A = _A;
+            m = _m;
+        }
 
         public List<BigInteger> BerechneUWerte()
         {
@@ -58,13 +68,13 @@ namespace BabystepGiantstep
 
             return result;
         }
-       
+
         public BigInteger Berechne_a()
         {
             BigInteger uPos = Tinder()[0];
             BigInteger vPos = Tinder()[1];
 
-            BigInteger a = (uPos * m - vPos) % (p-1);
+            BigInteger a = (uPos * m - vPos) % (p - 1);
             return a;
         }
     }
