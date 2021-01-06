@@ -49,5 +49,17 @@ namespace BabystepGiantstep.Tests
 
             testEachValue(expected, result);
         }
+
+        [TestMethod]
+        public void Berechne_a()
+        {
+
+            BigInteger expected = 8;
+            Calculus calculus = new Calculus();
+
+            BigInteger result = calculus.Berechne_a();
+
+            Assert.AreEqual(expected, result);
+        }
     }
 }

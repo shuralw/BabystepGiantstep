@@ -59,5 +59,13 @@ namespace BabystepGiantstep
             return result;
         }
        
+        public BigInteger Berechne_a()
+        {
+            BigInteger uPos = Tinder()[0];
+            BigInteger vPos = Tinder()[1];
+
+            BigInteger a = (uPos * m - vPos) % (p-1);
+            return a;
+        }
     }
 }
