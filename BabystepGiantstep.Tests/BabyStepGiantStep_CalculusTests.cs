@@ -38,5 +38,16 @@ namespace BabystepGiantstep.Tests
                 Assert.AreEqual(expected[i], actual[i]);
             }
         }
+
+        [TestMethod]
+        public void GetMatchingPositions()
+        {
+            List<BigInteger> expected = new List<BigInteger>() { 6, 12 };
+            Calculus calculus = new Calculus();
+
+            List<BigInteger> result = calculus.GetMatchingPositions();
+
+            testEachValue(expected, result);
+        }
     }
 }

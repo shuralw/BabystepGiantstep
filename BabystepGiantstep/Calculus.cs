@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
 
 namespace BabystepGiantstep
@@ -37,6 +39,18 @@ namespace BabystepGiantstep
             }
 
             return result;
+        }
+
+        public  List<BigInteger> GetMatchingPositions()
+        {
+            List<BigInteger> result = new List<BigInteger>();
+            List<BigInteger> uWerte = BerechneUWerte();
+            List<BigInteger> vWerte = BerechneVWerte();
+
+            result = uWerte.Intersect(vWerte).ToList();
+
+            return result;
+
         }
     }
 }
