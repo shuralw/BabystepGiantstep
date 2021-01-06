@@ -41,16 +41,23 @@ namespace BabystepGiantstep
             return result;
         }
 
-        public  List<BigInteger> GetMatchingPositions()
+        public List<BigInteger> Tinder()
+        // Sucht den passenden Partner
         {
-            List<BigInteger> result = new List<BigInteger>();
+            List<BigInteger> matches = new List<BigInteger>();
             List<BigInteger> uWerte = BerechneUWerte();
             List<BigInteger> vWerte = BerechneVWerte();
+            List<BigInteger> result = BerechneVWerte();
 
-            result = uWerte.Intersect(vWerte).ToList();
+            matches = uWerte.Intersect(vWerte).ToList();
+
+            int uPos = uWerte.IndexOf(matches.First());
+            int vPos = vWerte.IndexOf(matches.First());
+
+            result = new List<BigInteger>() { uPos, vPos };
 
             return result;
-
         }
+       
     }
 }

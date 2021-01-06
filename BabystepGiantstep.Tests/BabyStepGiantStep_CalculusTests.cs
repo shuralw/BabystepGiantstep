@@ -42,10 +42,10 @@ namespace BabystepGiantstep.Tests
         [TestMethod]
         public void GetMatchingPositions()
         {
-            List<BigInteger> expected = new List<BigInteger>() { 6, 12 };
+            List<BigInteger> expected = new List<BigInteger>() { 1, 4 };
             Calculus calculus = new Calculus();
 
-            List<BigInteger> result = calculus.GetMatchingPositions();
+            List<BigInteger> result = calculus.Tinder();
 
             testEachValue(expected, result);
         }
